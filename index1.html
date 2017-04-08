@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var dpr,rem,scale;var docEl=document.documentElement;var fontEl=document.createElement("style");rem=docEl.clientWidth*0.1;docEl.firstElementChild.appendChild(fontEl);fontEl.innerHTML="html{font-size:"+rem+"px!important;}";var supportsOrientationChange="onorientationchange"in window,orientationEvent=supportsOrientationChange?"orientationchange":"resize";function orientationchange(){setTimeout(function(){docEl.firstElementChild.removeChild(fontEl);rem=docEl.clientWidth*0.1;docEl.firstElementChild.appendChild(fontEl);fontEl.innerHTML="html{font-size:"+rem+"px!important;}"},300)}
+        window.addEventListener(orientationEvent,orientationchange,false);window.alert=customAlert;function customAlert(str){var alertGroup=document.getElementsByClassName("alertClass");if(alertGroup.length>=1){alertGroup[0].getElementsByTagName("div")[0].innerHTML=str;alertGroup[0].style.display="block"}else{var alertBox=document.createElement("div");alertBox.className="alertClass";alertBox.innerHTML='<div onclick="closeAlert()">'+str+"</div>";document.body.appendChild(alertBox)}
+            setTimeout(closeAlert,3000)}
+        function closeAlert(){var alertBox=document.getElementsByClassName("alertClass")[0];alertBox.style.display="none"};
+    </script>
+    <style>
+        html{
+            font-size: 64px;
+        }
+        *{padding:0;margin:0;}
+        ul,li{list-style: none;
+        }
+        .gezi ul li{
+            width: 3rem;
+            height:3rem;
+            margin: 5px;
+            float: left;
+            background-color: orange;
+            border-radius: 0.1rem;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="gezi">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>
